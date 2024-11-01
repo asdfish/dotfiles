@@ -1,8 +1,10 @@
 btop/btop.log
 btop/themes
 
-emacs/.cache
-emacs/autosaves
-emacs/backups
-emacs/elpa
-emacs/transient
+emacs/.cache/
+emacs/autosaves/
+emacs/backups/
+emacs/elpa/
+emacs/transient/
+emacs/recentf
+*.elc
