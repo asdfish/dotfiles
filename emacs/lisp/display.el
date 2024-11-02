@@ -3,7 +3,7 @@
       initial-buffer-choice nil)
 ; hide stuff
 (menu-bar-mode -1)
-(toggle-scroll-bar -1)
+(scroll-bar-mode -1)
 (tool-bar-mode -1)
 
 ; line number
@@ -27,6 +27,18 @@
 (blink-cursor-mode 0)
 
 ; tabline
-(global-tab-line-mode 1)
+(require 'powerline)
+(defun my/tab-line-tab-name-buffer (buffer &optional _buffers)
+  (powerline-render (list
+                     (powerline-slant-right 'tab-line nil 35)
+                     (format " %s " (buffer-name buffer))
+                     (powerline-slant-right nil 'tab-line 35))))
+(setq tab-line-tab-name-function #'my/tab-line-tab-name-buffer)
+
+(set-face-attribute 'tab-line nil
+                    :foreground "black"
+                    :background "black")
+
 (setq tab-line-new-button-show nil)
 (setq tab-line-close-button-show nil)
+(global-tab-line-mode 1)

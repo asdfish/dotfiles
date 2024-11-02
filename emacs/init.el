@@ -1,4 +1,4 @@
-(require 'face-remap)
+(require 'powerline)
 
 (add-to-list 'load-path (format "%s/lisp" user-emacs-directory))
 

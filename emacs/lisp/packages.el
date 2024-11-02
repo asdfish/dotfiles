@@ -9,6 +9,7 @@
                        'neotree
                        'org
                        'org-present
+                       'powerline
                        'vimish-fold
                        'vterm)
   "list of packages to be installed")
@@ -19,7 +20,7 @@
              '("melpa" . "http://melpa.org/packages/") t)
 (add-to-list 'package-archives
              '("melpa-stable" . "http://stable.melpa.org/packages/") t)
-;; (package-refresh-contents)
+;(package-refresh-contents)
 
 (dolist (i packages)
   (if (not (package-installed-p i))
@@ -31,7 +32,7 @@
   (setq dashboard-startup-banner 'logo)
   (setq dashboard-center-content t)
   (setq dashboard-vertically-center-content t)
-  (setq dashboard-items '((recents . 5)))
+  (setq dashboard-items '((recents . 10)))
   :init
   (dashboard-setup-startup-hook))
 
@@ -40,7 +41,8 @@
   (doom-modeline-mode 1))
 (use-package doom-themes
   :init
-  (load-theme 'doom-tokyo-night t))
+  (load-theme 'doom-tokyo-night t)
+  )
 
 (use-package evil
   :init
