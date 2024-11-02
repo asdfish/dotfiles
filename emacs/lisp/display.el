@@ -22,3 +22,11 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
 (setq indent-line-function 'insert-tab)
+
+; blink
+(blink-cursor-mode 0)
+
+; tabline
+(global-tab-line-mode 1)
+(setq tab-line-new-button-show nil)
+(setq tab-line-close-button-show nil)

@@ -1,4 +1,5 @@
-; display
+(require 'face-remap)
+
 (add-to-list 'load-path (format "%s/lisp" user-emacs-directory))
 
 
