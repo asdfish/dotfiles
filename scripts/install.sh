@@ -1,6 +1,7 @@
 #!/bin/sh
+set -e
 
-set -xe
+PREFIX="/usr/local/"
 
 CONFIG_DIRECTORIES=(
   "btop"
@@ -13,26 +14,39 @@ CONFIG_DIRECTORIES=(
   "wofi"
 )
 
+EXECUTABES=(
+  "scripts/setbg"
+  "scripts/wofi_run"
+)
+
 MISC_LINKS=(
   ".bashrc" "${HOME}"
-  "scripts/setbg" "/usr/local/bin"
-  "scripts/wofi_run" "/usr/local/bin"
 )
 
 REPO_DIRECTORY="$(realpath ..)"
 
-for CONFIG_DIRECTORY in "${CONFIG_DIRECTORIES[@]}"; do
-  cd "${REPO_DIRECTORY}"
-  REAL_CONFIG_DIRECTORY="$(realpath "${CONFIG_DIRECTORY}")"
-  cd "${HOME}/.config"
+LINK() {
+  FROM="${1}"
+  TARGET_DIRECTORY="${2}"
 
-  ln -sf "${REAL_CONFIG_DIRECTORY}"
+  cd "${REPO_DIRECTORY}"
+  FROM="$(realpath "${FROM}")"
+
+  cd "${TARGET_DIRECTORY}"
+  ln -sf "${FROM}"
+}
+
+for CONFIG_DIRECTORY in "${CONFIG_DIRECTORIES[@]}"; do
+  LINK "${CONFIG_DIRECTORY}" "${HOME}/.config"
+done
+
+for EXECUTABLE in "${EXECUTABLES[@]}"; do
+  LINK "${EXECUTABLE}" "${PREFIX}/bin"
 done
 
 for ((I=0; I < "${#MISC_LINKS[@]}"; I+=2)); do
-  cd "${REPO_DIRECTORY}"
-  FROM="$(realpath "${MISC_LINKS[${I}]}")"
+  FROM="${MISC_LINKS[${I}]}"
+  TARGET_DIRECTORY="${MISC_LINKS[((${I}+1))]}"
 
-  cd "${MISC_LINKS[((${I}+1))]}"
-  ln -sf "${FROM}"
+  LINK "${FROM}" "${TARGET_DIRECTORY}"
 done
