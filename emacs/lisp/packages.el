@@ -41,7 +41,8 @@
   (doom-modeline-mode 1))
 (use-package doom-themes
   :init
-  (load-theme 'doom-tokyo-night t)
+  (load-theme 'doom-opera t)
+  ;(load-theme 'doom-tokyo-night t)
   )
 
 (use-package evil
