@@ -85,6 +85,8 @@ terminal = "foot"
 menu = "wofi --show=drun --style=" + menu_style_path
 
 keys = [
+    # Toggle bar
+    Key([mod], "b", lazy.hide_show_bar(position="top"), desc="Toggle bar"),
     # A list of available commands that can be bound to keys can be found
     # at https://docs.qtile.org/en/latest/manual/config/lazy.html
     # Switch between windows
