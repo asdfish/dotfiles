@@ -14,7 +14,7 @@ CONFIG_DIRECTORIES=(
   "wofi"
 )
 
-EXECUTABES=(
+EXECUTABLES=(
   "scripts/setbg"
   "scripts/wofi_run"
 )
