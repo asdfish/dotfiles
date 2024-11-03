@@ -28,6 +28,8 @@ export CC="gcc"
 export CXX="g++"
 
 export BROWSER="firefox"
+export EDITOR="nvim"
+export TERM="footclient"
 
 fastfetch
 
