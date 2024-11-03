@@ -11,7 +11,7 @@
 (global-display-line-numbers-mode 1)
 
 ; font
-(set-face-attribute 'default nil :height 200)
+(set-face-attribute 'default nil :height 100)
 (if (find-font (font-spec :name "0xProto Nerd Font Mono"))
   (set-fontset-font "fontset-startup" nil "0xProto Nerd Font Mono"))
 
