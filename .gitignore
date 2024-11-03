@@ -11,3 +11,5 @@ emacs/recentf
 *.elc
 
 nvim/lazy-lock.json
+
+qtile/__pycache__
