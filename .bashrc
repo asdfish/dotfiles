@@ -30,3 +30,5 @@ export CXX="g++"
 export BROWSER="firefox"
 
 fastfetch
+
+eval "$(zoxide init bash --cmd cd)"
