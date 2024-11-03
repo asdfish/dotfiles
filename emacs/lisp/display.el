@@ -28,17 +28,20 @@
 
 ; tabline
 (require 'powerline)
+(global-tab-line-mode 1)
+
 (defun my/tab-line-tab-name-buffer (buffer &optional _buffers)
   (powerline-render (list
-                     (powerline-slant-right 'tab-line nil 35)
+                     (powerline-slant-left 'tab-line nil 35)
                      (format " %s " (buffer-name buffer))
-                     (powerline-slant-right nil 'tab-line 35))))
+                     (powerline-slant-left nil 'tab-line 35))))
 (setq tab-line-tab-name-function #'my/tab-line-tab-name-buffer)
 
+(set-face-attribute 'tab-line-tab-current nil
+                    :foreground "white")
 (set-face-attribute 'tab-line nil
                     :foreground "black"
                     :background "black")
 
 (setq tab-line-new-button-show nil)
 (setq tab-line-close-button-show nil)
-(global-tab-line-mode 1)
