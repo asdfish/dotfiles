@@ -1,4 +1,5 @@
-# Dotfiles
+# Arch branch
+Dotfiles for my other computer running arch
 
 ## Installation
 ~~~sh
