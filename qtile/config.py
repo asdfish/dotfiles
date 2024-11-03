@@ -27,7 +27,7 @@
 from random import random
 from os import listdir, environ
 
-from libqtile import layout, qtile, widget
+from libqtile import bar, layout, qtile, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.backend.wayland import InputConfig
@@ -37,6 +37,43 @@ home_path = environ["HOME"]
 menu_style_path = home_path + "/.config/wofi/src/mocha/style.css"
 wallpapers_directory = home_path + "/files/wallpapers"
 wallpapers = listdir(wallpapers_directory)
+
+font_size = 20
+
+bar_size = font_size + 5
+
+# github.com/folke/tokyonight.nvim
+theme = {
+        "bg": "#24283b",
+        "bg_dark": "#1f2335",
+        "bg_highlight": "#292e42",
+        "blue": "#7aa2f7",
+        "blue0": "#3d59a1",
+        "blue1": "#2ac3de",
+        "blue2": "#0db9d7",
+        "blue5": "#89ddff",
+        "blue6": "#b4f9f8",
+        "blue7": "#394b70",
+        "comment": "#565f89",
+        "cyan": "#7dcfff",
+        "dark3": "#545c7e",
+        "dark5": "#737aa2",
+        "fg": "#c0caf5",
+        "fg_dark": "#a9b1d6",
+        "fg_gutter": "#3b4261",
+        "green": "#9ece6a",
+        "green1": "#73daca",
+        "green2": "#41a6b5",
+        "magenta": "#bb9af7",
+        "magenta2": "#ff007c",
+        "orange": "#ff9e64",
+        "purple": "#9d7cd8",
+        "red": "#f7768e",
+        "red1": "#db4b4b",
+        "teal": "#1abc9c",
+        "terminal_black": "#414868",
+        "yellow": "#e0af68",
+        }
 
 def get_wallpaper():
     return wallpapers_directory + "/" + wallpapers[int(random() * len(wallpapers))]
@@ -134,7 +171,7 @@ for i in groups:
     )
 
 layouts = [
-    layout.MonadTall(margin=20, border_width=1, border_focus="#7aa2f7"),
+    layout.MonadTall(margin=20, border_width=1, border_focus=theme["blue"]),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
@@ -150,13 +187,65 @@ layouts = [
 
 widget_defaults = dict(
     font="0xProto Nerd Font Mono",
-    fontsize=20,
-    padding=3,
+    fontsize=font_size,
+    padding=0,
 )
 extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
+        top = bar.Bar(
+            background = theme["bg"],
+            widgets = [
+                widget.GroupBox(
+                    highlight_color = theme["bg"],
+                    this_current_screen_border = theme["cyan"],
+                    padding = 5,
+                    borderwidth = 2,
+                    hide_unused = True,
+                    highlight_method = "line"
+                    ),
+                widget.WindowName(fmt = " {} "),
+
+                widget.TextBox("",
+                               fontsize = bar_size,
+                               foreground = theme["cyan"]),
+                widget.Clock(
+                    format = "%T",
+                    fmt = " {} ",
+                    foreground = theme["bg"],
+                    background = theme["cyan"]),
+                widget.TextBox("",
+                               fontsize = bar_size,
+                               foreground = theme["bg"],
+                               background = theme["cyan"]),
+                
+                widget.TextBox("",
+                               fontsize = bar_size,
+                               foreground = theme["blue0"]),
+                widget.Battery(
+                    battery = "BAT0",
+                    fmt = " {} ",
+                    charge_char = "",
+                    discharge_char = "",
+                    full_char = "",
+                    empty_char = "─",
+                    format = "  {char} {percent:0.0%} ",
+                    background = theme["blue0"]),
+                widget.TextBox("",
+                               fontsize = bar_size,
+                               foreground = theme["bg"],
+                               background = theme["blue0"]),
+                
+                widget.TextBox("",
+                               fontsize = bar_size,
+                               foreground = theme["blue7"]),
+                widget.Clock(
+                    format = "%a %d %b %Y",
+                    fmt = "{} ",
+                    background = theme["blue7"]),
+                ],
+            size = bar_size),
         # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
         # By default we handle these events delayed to already improve performance, however your system might still be struggling
         # This variable is set to None (no cap) by default, but you can set it to 60 to indicate that you limit it to 60 events per second
