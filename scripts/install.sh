@@ -12,7 +12,7 @@ CONFIG_DIRECTORIES=(
   "wofi"
 )
 
-EXECUTABES=()
+EXECUTABLES=()
 
 MISC_LINKS=(
   ".bashrc" "${HOME}"
