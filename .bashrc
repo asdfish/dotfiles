@@ -7,10 +7,6 @@
 
 alias ls='ec'
 alias grep='grep --color=auto'
-alias qstart='qtile start -b wayland'
-
-alias ta="tmux attach"
-alias tls="tmux ls"
 
 C_BG_ACCENT="\e[41m"
 C_FG_ACCENT="\e[31m"
