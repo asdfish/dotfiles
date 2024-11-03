@@ -22,7 +22,7 @@ POWERLINE_HOSTNAME="${C_BG_ACCENT} \u@\h ${C_RESET}${C_FG_ACCENT}${C_BG_ACCENT_2
 POWERLINE_DIRECTORY="${C_BG_ACCENT_2} \w ${C_RESET}${C_FG_ACCENT_2}${C_RESET}"
 POWERLINE_PROMPT='\n \$! '
 export PS1="${POWERLINE_HOSTNAME}${POWERLINE_DIRECTORY}${POWERLINE_PROMPT}"
-export PATH="$PATH:~/.cargo/bin/:~/.config/emacs/bin/"
+export PATH="$PATH:~/.cargo/bin/"
 
 export CC="gcc"
 export CXX="g++"
