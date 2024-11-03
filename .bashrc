@@ -27,6 +27,10 @@ export PATH="$PATH:~/.cargo/bin/:~/.config/emacs/bin/"
 export CC="gcc"
 export CXX="g++"
 
+export EDITOR="nvim"
+export TERM="footclient"
 export BROWSER="firefox"
 
 fastfetch
+
+eval "$(zoxide init bash --cmd cd)"
