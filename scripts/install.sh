@@ -22,6 +22,7 @@ CONFIG_DIRECTORIES=(
 EXECUTABLES=(
   "scripts/setbg"
   "scripts/wofi_run"
+  "scripts/toggle"
 )
 
 MISC_LINKS=(

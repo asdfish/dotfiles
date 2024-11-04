@@ -1,0 +1,30 @@
+#!/bin/sh
+
+if [ "$#" == "0" ]; then
+  exit 0
+fi
+
+COMMAND=""
+
+for ARGUMENT in "$@"; do
+  COMMAND="${COMMAND} ${ARGUMENT}"
+done
+
+COMMAND_HEAD="$(echo "${COMMAND}" | awk '{print $1}')"
+
+if [ "${COMMAND_HEAD}" == "dbus-launch" ]; then
+  COMMAND_HEAD="$(echo "${COMMAND}" | awk '{print $2}')"
+fi
+
+if [ -z "${COMMAND_HEAD}" ]; then
+  exit 0
+fi
+
+PID="$(pgrep "${COMMAND_HEAD}")"
+
+if [ -n "${PID}" ]; then
+  kill -9 "${PID}"
+  exit 0
+fi
+
+eval "${COMMAND}"
