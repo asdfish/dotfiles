@@ -2,24 +2,57 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
-        "hyprland/window"
+        "custom/powerline-1-head",
+
+        "custom/powerline-2-tail",
+        "hyprland/window",
+        "custom/powerline-2-head"
     ],
     "modules-right": [
-      "custom/date",
-      "custom/time"
+      "custom/powerline-3-tail",
+      "battery",
+      "custom/powerline-3-head",
+
+      "custom/powerline-4-tail",
+      "custom/time",
+      "custom/powerline-4-head",
+
+      "custom/powerline-5-tail",
+      "custom/date"
     ],
-    "custom/date": {
-      "exec": "date +'%a %d %b %Y'",
-      "interval": "once"
+
+    "hyprland/workspaces": { "format": " {} " },
+    "custom/powerline-1-head": { "format": "" },
+
+    "custom/powerline-2-tail": { "format": "" },
+    "hyprland/window": { "format": " {} " },
+    "custom/powerline-2-head": { "format": "" },
+
+    "custom/powerline-3-head": { "format": "" },
+    "battery": {
+      "bat": "BAT0",
+      "format": " {capacity}% "
     },
+    "custom/powerline-3-tail": { "format": "" },
+
+    "custom/powerline-4-head": { "format": "" },
     "custom/time": {
+      "format": " {} ",
       "exec": "date +'%T'",
       "interval": 1
     },
+    "custom/powerline-4-tail": { "format": "" },
+
+    "custom/powerline-5-head": { "format": "" },
+    "custom/date": {
+      "format": " {} ",
+      "exec": "date +'%a %d %b %Y'",
+      "interval": "once"
+    },
+    "custom/powerline-5-tail": { "format": "" }
 }
