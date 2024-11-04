@@ -11,6 +11,7 @@ CONFIG_DIRECTORIES=(
   "hypr"
   "nvim"
   "tmux"
+  "waybar"
   "wofi"
 )
 
