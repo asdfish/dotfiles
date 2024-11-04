@@ -37,7 +37,7 @@
 
 * {
   font-family: "0xProto Nerd Font Mono";
-  font-size: 15px;
+  font-size: 30px;
   border-radius: 0px;
   margin: 0px;
   padding: 0px;
@@ -102,5 +102,5 @@ window#waybar {
 #custom-powerline-3-tail,
 #custom-powerline-4-head,
 #custom-powerline-4-tail {
-  font-size: 22px;
+  font-size: 32px;
 }
