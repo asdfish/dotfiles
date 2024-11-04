@@ -36,7 +36,20 @@
     "custom/powerline-3-head": { "format": "" },
     "battery": {
       "bat": "BAT0",
-      "format": " {capacity}% "
+      "format": " {capacity} {icon} ",
+      "format-icons": [
+        "󱃍",
+        "󰁺",
+        "󰁻",
+        "󰁼",
+        "󰁽",
+        "󰁾",
+        "󰁿",
+        "󰂀",
+        "󰂁",
+        "󰂂",
+        "󱟢"
+      ]
     },
     "custom/powerline-3-tail": { "format": "" },
 
