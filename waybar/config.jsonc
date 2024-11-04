@@ -23,8 +23,7 @@
       "custom/powerline-4-head",
 
       "custom/powerline-5-tail",
-      "custom/date",
-      "custom/powerline-5-head"
+      "custom/date"
     ],
 
     "hyprland/workspaces": { "format": " {} " },
