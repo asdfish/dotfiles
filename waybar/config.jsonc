@@ -19,8 +19,7 @@
       "custom/powerline-3-tail",
 
       "custom/powerline-4-head",
-      "custom/date",
-      "custom/powerline-4-tail"
+      "custom/date"
     ],
 
     "hyprland/workspaces": { "format": " {} " },
