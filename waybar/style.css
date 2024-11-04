@@ -50,7 +50,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-  border-bottom: 2px solid @red1;
+  background-color: @fg_gutter;
 }
 
 #custom-powerline-1-tail,
