@@ -34,7 +34,6 @@
 @define-color powerline-2 @fg_dark;
 @define-color powerline-3 @dark3;
 @define-color powerline-4 @terminal_black;
-@define-color powerline-5 @bg_highlight;
 
 * {
   font-family: "0xProto Nerd Font Mono";
@@ -72,7 +71,7 @@ window#waybar {
 }
 
 #custom-powerline-3-tail,
-#battery {
+#custom-time {
   background-color: @powerline-3;
 }
 
@@ -81,7 +80,7 @@ window#waybar {
 }
 
 #custom-powerline-4-tail,
-#custom-time {
+#custom-date {
   background-color: @powerline-4;
 }
 
@@ -89,20 +88,10 @@ window#waybar {
   color: @powerline-4;
 }
 
-#custom-powerline-5-tail,
-#custom-date {
-  background-color: @powerline-5;
-}
-
-#custom-powerline-5-head {
-  color: @powerline-5;
-}
-
 #custom-powerline-1-tail,
 #custom-powerline-2-tail,
 #custom-powerline-3-tail,
-#custom-powerline-4-tail,
-#custom-powerline-5-tail {
+#custom-powerline-4-tail {
   color: @background;
 }
 
@@ -112,8 +101,6 @@ window#waybar {
 #custom-powerline-3-head,
 #custom-powerline-3-tail,
 #custom-powerline-4-head,
-#custom-powerline-4-tail,
-#custom-powerline-5-head,
-#custom-powerline-5-tail {
+#custom-powerline-4-tail {
   font-size: 22px;
 }
