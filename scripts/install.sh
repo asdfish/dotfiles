@@ -7,8 +7,9 @@ CONFIG_DIRECTORIES=(
   "btop"
   "fastfetch"
   "foot"
+  "hypr"
   "nvim"
-  "qtile"
+  "waybar"
   "wofi"
 )
 
