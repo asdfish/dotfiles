@@ -1,7 +1,8 @@
 #!/bin/sh
 set -e
 
-echo "Pick a user?"
+echo "Pick a user:"
+
 HOME_PATH=""
 read HOME_PATH
 HOME_PATH="/home/${HOME_PATH}"
@@ -21,6 +22,7 @@ CONFIG_DIRECTORIES=(
 EXECUTABLES=(
   "scripts/setbg"
   "scripts/wofi_run"
+  "scripts/toggle"
 )
 
 MISC_LINKS=(
