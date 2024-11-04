@@ -28,12 +28,92 @@
 @define-color terminal_black #444a73;
 @define-color yellow #ffc777;
 
+@define-color background @bg;
+@define-color foreground @fg;
+@define-color powerline-1 @blue7;
+@define-color powerline-2 @fg_dark;
+@define-color powerline-3 @dark3;
+@define-color powerline-4 @terminal_black;
+@define-color powerline-5 @bg_highlight;
+
 * {
   font-family: "0xProto Nerd Font Mono";
-  font-size: 30px;
-  color: @fg;
+  font-size: 15px;
+  border-radius: 0px;
+  margin: 0px;
+  padding: 0px;
+  color: @foreground;
 }
 
 window#waybar {
-  background-color: @bg;
+  background-color: @background;
+}
+
+#workspaces button.active {
+  border-bottom: 2px solid @red1;
+}
+
+#custom-powerline-1-tail,
+#workspaces {
+  background-color: @powerline-1;
+}
+
+#custom-powerline-1-head {
+  color: @powerline-1;
+}
+
+#custom-powerline-2-tail,
+#window {
+  background-color: @powerline-2;
+}
+
+#custom-powerline-2-head {
+  color: @powerline-2;
+}
+
+#custom-powerline-3-tail,
+#battery {
+  background-color: @powerline-3;
+}
+
+#custom-powerline-3-head {
+  color: @powerline-3;
+}
+
+#custom-powerline-4-tail,
+#custom-time {
+  background-color: @powerline-4;
+}
+
+#custom-powerline-4-head {
+  color: @powerline-4;
+}
+
+#custom-powerline-5-tail,
+#custom-date {
+  background-color: @powerline-5;
+}
+
+#custom-powerline-5-head {
+  color: @powerline-5;
+}
+
+#custom-powerline-1-tail,
+#custom-powerline-2-tail,
+#custom-powerline-3-tail,
+#custom-powerline-4-tail,
+#custom-powerline-5-tail {
+  color: @background;
+}
+
+#custom-powerline-1-head,
+#custom-powerline-2-head,
+#custom-powerline-2-tail,
+#custom-powerline-3-head,
+#custom-powerline-3-tail,
+#custom-powerline-4-head,
+#custom-powerline-4-tail,
+#custom-powerline-5-head,
+#custom-powerline-5-tail {
+  font-size: 22px;
 }
