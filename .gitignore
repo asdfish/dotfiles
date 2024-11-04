@@ -1,13 +1,15 @@
 btop/btop.log
 btop/themes
 
-old/emacs/.cache/
-old/emacs/auto-save-list/
-old/emacs/autosaves/
-old/emacs/backups/
-old/emacs/elpa/
-old/emacs/transient/
-old/emacs/recentf
+nvim/lazy-lock.json
+
+unused/emacs/.cache/
+unused/emacs/auto-save-list/
+unused/emacs/autosaves/
+unused/emacs/backups/
+unused/emacs/elpa/
+unused/emacs/transient/
+unused/emacs/recentf
 *.elc
 
-nvim/lazy-lock.json
+unused/qtile/__pycache__
