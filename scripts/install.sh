@@ -1,6 +1,11 @@
 #!/bin/sh
 set -e
 
+echo "Pick a user?"
+HOME_PATH=""
+read HOME_PATH
+HOME_PATH="/home/${HOME_PATH}"
+
 PREFIX="/usr/local/"
 
 CONFIG_DIRECTORIES=(
@@ -13,10 +18,13 @@ CONFIG_DIRECTORIES=(
   "wofi"
 )
 
-EXECUTABLES=()
+EXECUTABLES=(
+  "scripts/setbg"
+  "scripts/wofi_run"
+)
 
 MISC_LINKS=(
-  ".bashrc" "${HOME}"
+  ".bashrc" "${HOME_PATH}"
 )
 
 REPO_DIRECTORY="$(realpath ..)"
@@ -33,7 +41,7 @@ LINK() {
 }
 
 for CONFIG_DIRECTORY in "${CONFIG_DIRECTORIES[@]}"; do
-  LINK "${CONFIG_DIRECTORY}" "${HOME}/.config"
+  LINK "${CONFIG_DIRECTORY}" "${HOME_PATH}/.config"
 done
 
 for EXECUTABLE in "${EXECUTABLES[@]}"; do
