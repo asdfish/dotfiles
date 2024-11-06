@@ -29,11 +29,15 @@
 @define-color yellow #ffc777;
 
 @define-color background @bg;
-@define-color foreground @fg;
-@define-color powerline-1 @blue7;
-@define-color powerline-2 @fg_dark;
-@define-color powerline-3 @dark3;
-@define-color powerline-4 @terminal_black;
+@define-color foreground @fg_gutter;
+
+@define-color accent @cyan;
+@define-color accent_dark @blue0;
+
+@define-color powerline-1 @cyan;
+@define-color powerline-2 @fg;
+@define-color powerline-3 @fg;
+@define-color powerline-4 @cyan;
 
 * {
   font-family: "0xProto Nerd Font Mono";
@@ -49,7 +53,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-  border-bottom: 3px solid @cyan;
+  border-bottom: 5px solid @accent_dark;
 }
 
 #custom-powerline-1-tail,
