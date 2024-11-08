@@ -7,7 +7,8 @@
 
 alias ls='ec'
 alias grep='grep --color=auto'
-alias qstart='qtile start -b wayland'
+alias diff='diff --color=auto'
+alias ip='ip -color=auto'
 
 C_BG_ACCENT="\e[41m"
 C_FG_ACCENT="\e[31m"
@@ -27,6 +28,8 @@ export CXX="g++"
 export BROWSER="firefox"
 export EDITOR="nvim"
 export TERM="footclient"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANROFFOPT="-c"
 
 fastfetch
 
