@@ -1,4 +1,10 @@
 *.o
+suckless/dmenu/dmenu
+suckless/dwm/dwm
+suckless/st/st
+
+*.orig
+*.rej
 
 btop/btop.log
 btop/themes
