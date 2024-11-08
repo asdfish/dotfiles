@@ -18,6 +18,7 @@ config.h:
 
 dwm: ${OBJ}
 	${CC} -o $@ ${OBJ} ${LDFLAGS}
+	strip $@
 
 clean:
 	rm -f dwm ${OBJ} dwm-${VERSION}.tar.gz
