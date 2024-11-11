@@ -5,8 +5,11 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+alias cat='bat'
 alias ls='ec'
 alias grep='grep --color=auto'
+alias diff='diff --color=auto'
+alias ip='ip -color=auto'
 alias cjunk='wl-copy asdf'
 
 C_BG_ACCENT="\e[41m"
