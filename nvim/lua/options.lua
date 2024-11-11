@@ -8,6 +8,7 @@ vim.opt.smartindent = true
 vim.opt.smarttab = true
 
 vim.opt.cursorline = true
+vim.opt.cursorcolumn = true
 
 vim.opt.number = true
 vim.opt.relativenumber = true

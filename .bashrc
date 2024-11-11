@@ -5,6 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+alias cat='bat'
 alias ls='ec'
 alias grep='grep --color=auto'
 alias diff='diff --color=auto'
@@ -22,15 +23,16 @@ POWERLINE_PROMPT='\n \$! '
 export PS1="${POWERLINE_HOSTNAME}${POWERLINE_DIRECTORY}${POWERLINE_PROMPT}"
 export PATH="$PATH:~/.cargo/bin/"
 
-export CC="gcc"
-export CXX="g++"
+export CC='gcc'
+export CXX='g++'
 
-export BROWSER="firefox"
-export EDITOR="nvim"
-export TERM="footclient"
+export BROWSER='firefox'
+export EDITOR='nvim'
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-export MANROFFOPT="-c"
+export MANROFFOPT='-c'
 
 fastfetch
+
+set -o vi
 
 eval "$(zoxide init bash --cmd cd)"

@@ -54,7 +54,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-  border-bottom: 5px solid @accent_dark;
+  border-bottom: 1px solid @accent_dark;
 }
 
 #custom-powerline-1-tail,
