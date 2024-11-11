@@ -27,6 +27,8 @@ export EDITOR="nvim"
 export TERM="footclient"
 export BROWSER="firefox"
 
+set -o vi
+
 fastfetch
 
 eval "$(zoxide init bash --cmd cd)"
