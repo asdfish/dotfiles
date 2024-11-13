@@ -10,6 +10,7 @@ alias ls='ec'
 alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 alias ip='ip -color=auto'
+alias cjunk='wl-copy asdf'
 
 C_BG_ACCENT="\e[41m"
 C_FG_ACCENT="\e[31m"
@@ -21,7 +22,7 @@ POWERLINE_HOSTNAME="${C_BG_ACCENT} \u@\h ${C_RESET}${C_FG_ACCENT}${C_BG_ACCENT_2
 POWERLINE_DIRECTORY="${C_BG_ACCENT_2} \w ${C_RESET}${C_FG_ACCENT_2}${C_RESET}"
 POWERLINE_PROMPT='\n \$! '
 export PS1="${POWERLINE_HOSTNAME}${POWERLINE_DIRECTORY}${POWERLINE_PROMPT}"
-export PATH="$PATH:~/.cargo/bin/"
+export PATH="$PATH:~/.cargo/bin/:~/.local/bin/"
 
 export CC='gcc'
 export CXX='g++'
