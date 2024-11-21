@@ -5,13 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias cat='bat'
-alias ls='ec'
-alias grep='grep --color=auto'
-alias diff='diff --color=auto'
-alias ip='ip -color=auto'
-alias cjunk='wl-copy asdf'
-
 C_BG_ACCENT="\e[41m"
 C_FG_ACCENT="\e[31m"
 C_BG_ACCENT_2="\e[44m"
@@ -31,6 +24,15 @@ export BROWSER='firefox'
 export EDITOR='nvim'
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT='-c'
+
+alias cat='bat'
+alias ls='ec'
+alias grep='grep --color=auto'
+alias diff='diff --color=auto'
+alias ip='ip -color=auto'
+alias cjunk='wl-copy asdf'
+alias v='nvim'
+alias vc='nvim --clean'
 
 fastfetch
 
