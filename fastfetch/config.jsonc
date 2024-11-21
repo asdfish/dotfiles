@@ -13,6 +13,8 @@
     "os",
     "battery",
     "memory",
+    "cpu",
+    "gpu",
     "disk",
     "kernel",
     "packages",

@@ -1,2 +1,2 @@
 #!/bin/sh
-dbus-launch swaybg -i $(find ~/files/wallpapers | shuf -n 1)
+dbus-launch swaybg -i $(find ~/files/wallpapers -type f | shuf -n 1)

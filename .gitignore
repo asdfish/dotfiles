@@ -9,4 +9,15 @@ suckless/st/st
 btop/btop.log
 btop/themes
 
+unused/emacs/*
+unused/emacs/*/*.elc
+unused/emacs/*~
+unused/emacs/*/*~
+unused/emacs/auto-save-list
+unused/emacs/backups
+unused/emacs/elpa
+unused/emacs/games
+unused/emacs/transient
+unused/emacs/recentf
+
 nvim/lazy-lock.json
