@@ -41,7 +41,7 @@
 
 * {
   font-family: "0xProto Nerd Font Mono";
-  font-size: 30px;
+  font-size: 10px;
   border-radius: 0px;
   margin: 0px;
   padding: 0px;
@@ -53,7 +53,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-  border-bottom: 5px solid @accent_dark;
+  border-bottom: 2px solid @accent_dark;
 }
 
 #custom-powerline-1-tail,
@@ -106,5 +106,5 @@ window#waybar {
 #custom-powerline-3-tail,
 #custom-powerline-4-head,
 #custom-powerline-4-tail {
-  font-size: 32px;
+  font-size: 22px;
 }
