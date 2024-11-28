@@ -25,6 +25,3 @@ vim.api.nvim_set_keymap("n", "<c-c>", "<cmd>bdelete<cr>", { desc = "Delete buffe
 -- terminal
 vim.api.nvim_set_keymap("t", "<c-e>", "<c-\\><c-n>", { desc = "Exit terminal insert mode" })
 vim.api.nvim_set_keymap("n", "<leader>ot", "<cmd>terminal<cr>", { desc = "Open terminal" })
-
--- cmds
-vim.api.nvim_set_keymap("v", "<leader>mf", "<cmd>'<,'>!tr -s ' ' | column -t -s '|' -o '|'<cr>", { desc = "Format markdown table" })
