@@ -35,6 +35,8 @@ export TERM="footclient"
 export BROWSER="firefox"
 export MANPAGER='nvim +Man!'
 
+alias cb='cargo build'
+
 alias cat='bat'
 alias ls='ec'
 alias grep='grep --color=auto'
@@ -51,6 +53,7 @@ ghc() {
   git clone "https://github.com/${1}" --depth 1 --recursive
 }
 
+shopt -s autocd
 set -o vi
 
 fastfetch
