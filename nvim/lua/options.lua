@@ -13,8 +13,8 @@ vim.opt.cursorcolumn = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 
-vim.opt.termguicolors = true
+if not os.getenv("TERM") == "linux" then
+  vim.opt.termguicolors = true
+end
 
 vim.opt.clipboard = "unnamedplus"
-
-vim.opt.foldmethod = "syntax"

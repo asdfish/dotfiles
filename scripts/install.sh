@@ -13,17 +13,12 @@ CONFIG_DIRECTORIES=(
   "btop"
   "fastfetch"
   "foot"
-  "hypr"
   "nvim"
   "waybar"
   "wofi"
 )
 
-EXECUTABLES=(
-  "scripts/setbg"
-  "scripts/wofi_run"
-  "scripts/toggle"
-)
+EXECUTABLES=()
 
 MISC_LINKS=(
   ".bashrc" "${HOME_PATH}"
