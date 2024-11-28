@@ -1,0 +1,7 @@
+#!/bin/sh
+
+pipewire-pulse &
+pipewire &
+wireplumber &
+
+~/.cargo/bin/sway_autotiling &

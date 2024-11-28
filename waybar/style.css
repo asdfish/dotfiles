@@ -85,7 +85,7 @@ window#waybar {
 }
 
 #custom-powerline-4-tail,
-#custom-time {
+#clock.time {
   background-color: @powerline-4;
 }
 
@@ -94,7 +94,7 @@ window#waybar {
 }
 
 #custom-powerline-5-tail,
-#custom-date {
+#clock.date {
   background-color: @powerline-5;
 }
 

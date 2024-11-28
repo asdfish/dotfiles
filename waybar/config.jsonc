@@ -6,11 +6,11 @@
     "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "hyprland/workspaces",
+        "sway/workspaces",
         "custom/powerline-1-head",
 
         "custom/powerline-2-tail",
-        "hyprland/window",
+        "sway/window",
         "custom/powerline-2-head"
     ],
     "modules-right": [
@@ -19,18 +19,18 @@
       "custom/powerline-3-tail",
 
       "custom/powerline-4-head",
-      "custom/time",
+      "clock#time",
       "custom/powerline-4-tail",
 
       "custom/powerline-5-head",
-      "custom/date"
+      "clock#date"
     ],
 
     "hyprland/workspaces": { "format": " {} " },
     "custom/powerline-1-head": { "format": "" },
 
     "custom/powerline-2-tail": { "format": "" },
-    "hyprland/window": { "format": " {} " },
+    "sway/window": { "format": " {} " },
     "custom/powerline-2-head": { "format": "" },
 
     "custom/powerline-3-head": { "format": "" },
@@ -54,17 +54,15 @@
     "custom/powerline-3-tail": { "format": "" },
 
     "custom/powerline-4-head": { "format": "" },
-    "custom/time": {
-      "format": " {} ",
-      "exec": "date +'%T'",
+    "clock#time": {
+      "format": " {:%T} ",
       "interval": 1
     },
     "custom/powerline-4-tail": { "format": "" },
 
     "custom/powerline-5-head": { "format": "" },
-    "custom/date": {
-      "format": " {} ",
-      "exec": "date +'%a %d %b %Y'",
+    "clock#date": {
+      "format": " {:%a %d %b %Y} ",
       "interval": "once"
     },
     "custom/powerline-5-tail": { "format": "" }
