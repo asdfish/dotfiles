@@ -14,11 +14,14 @@ CONFIG_DIRECTORIES=(
   "fastfetch"
   "foot"
   "nvim"
+  "sway"
   "waybar"
   "wofi"
 )
 
-EXECUTABLES=()
+EXECUTABLES=(
+  "scripts/wofi_run"
+)
 
 MISC_LINKS=(
   ".bashrc" "${HOME_PATH}"
