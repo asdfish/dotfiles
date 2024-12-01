@@ -36,6 +36,7 @@ export BROWSER="firefox"
 export MANPAGER='nvim +Man!'
 
 alias cb='cargo build'
+alias cr='cargo run'
 
 alias cat='bat'
 alias ls='ec'
@@ -46,6 +47,8 @@ alias cjunk='wl-copy asdf'
 alias v='nvim'
 alias vc='nvim --clean'
 
+alias m='make'
+
 ghc() {
   if [ -z "${1}" ]; then
     return
@@ -55,6 +58,8 @@ ghc() {
 
 shopt -s autocd
 set -o vi
+
+bind -x '"\C-l":clear'
 
 fastfetch
 

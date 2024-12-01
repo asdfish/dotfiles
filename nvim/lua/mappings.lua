@@ -17,6 +17,8 @@ vim.api.nvim_set_keymap("n", "<c-n>", "<cmd>NvimTreeToggle<cr>", { desc = "Nvim-
 
 vim.api.nvim_set_keymap("n", "<leader>at", "<cmd>TransparentToggle<cr>", { desc = "Toggle background transparency" })
 
+vim.api.nvim_set_keymap("n", "<leader>lu", "<cmd>Lazy update<cr>", { desc = "Toggle background transparency" })
+
 -- buffer
 vim.api.nvim_set_keymap("n", "<c-q>", "<cmd>bp<cr>", { desc = "Previous buffer" })
 vim.api.nvim_set_keymap("n", "<c-e>", "<cmd>bn<cr>", { desc = "Next buffer" })
