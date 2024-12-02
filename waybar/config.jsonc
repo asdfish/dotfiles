@@ -1,69 +1,79 @@
 // -*- mode: jsonc -*-
 {
-    // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    // "width": 1280, // Waybar width
-    "spacing": 0, // Gaps between modules (4px)
-    // Choose the order of the modules
-    "modules-left": [
-        "sway/workspaces",
-        "custom/powerline-1-head",
+  // "layer": "top", // Waybar at top layer
+  // "position": "bottom", // Waybar position (top|bottom|left|right)
+  // "width": 1280, // Waybar width
+  "spacing": 0, // Gaps between modules (4px)
+  // Choose the order of the modules
+  "modules-left": [
+    "sway/workspaces",
+    "custom/powerline-1-head",
 
-        "custom/powerline-2-tail",
-        "sway/window",
-        "custom/powerline-2-head"
-    ],
-    "modules-right": [
-      "custom/powerline-3-head",
-      "battery",
-      "custom/powerline-3-tail",
+    "custom/powerline-2-tail",
+    "sway/window",
+    "custom/powerline-2-head"
+  ],
+  "modules-right": [
+    "custom/powerline-3-head",
+    "battery",
+    "custom/powerline-3-tail",
 
-      "custom/powerline-4-head",
-      "clock#time",
-      "custom/powerline-4-tail",
+    "custom/powerline-4-head",
+    "clock#time",
+    "custom/powerline-4-tail",
 
-      "custom/powerline-5-head",
-      "clock#date"
-    ],
+    "custom/powerline-5-head",
+    "clock#date",
+    "custom/powerline-5-tail",
 
-    "hyprland/workspaces": { "format": " {} " },
-    "custom/powerline-1-head": { "format": "" },
+    "custom/powerline-6-head",
+    "wireplumber"
+  ],
 
-    "custom/powerline-2-tail": { "format": "" },
-    "sway/window": { "format": " {} " },
-    "custom/powerline-2-head": { "format": "" },
+  "hyprland/workspaces": { "format": " {} " },
+  "custom/powerline-1-head": { "format": "" },
 
-    "custom/powerline-3-head": { "format": "" },
-    "battery": {
-      "bat": "BAT0",
-      "format": " {capacity} {icon} ",
-      "format-icons": [
-        "󱃍",
-        "󰁺",
-        "󰁻",
-        "󰁼",
-        "󰁽",
-        "󰁾",
-        "󰁿",
-        "󰂀",
-        "󰂁",
-        "󰂂",
-        "󱟢"
-      ]
-    },
-    "custom/powerline-3-tail": { "format": "" },
+  "custom/powerline-2-tail": { "format": "" },
+  "sway/window": { "format": " {} " },
+  "custom/powerline-2-head": { "format": "" },
 
-    "custom/powerline-4-head": { "format": "" },
-    "clock#time": {
-      "format": " {:%T} ",
-      "interval": 1
-    },
-    "custom/powerline-4-tail": { "format": "" },
+  "custom/powerline-3-head": { "format": "" },
+  "battery": {
+    "bat": "BAT0",
+    "format": " {capacity} {icon} ",
+    "format-icons": [
+      "󱃍",
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󱟢"
+    ]
+  },
+  "custom/powerline-3-tail": { "format": "" },
 
-    "custom/powerline-5-head": { "format": "" },
-    "clock#date": {
-      "format": " {:%a %d %b %Y} ",
-      "interval": "once"
-    },
-    "custom/powerline-5-tail": { "format": "" }
+  "custom/powerline-4-head": { "format": "" },
+  "clock#time": {
+    "format": " {:%T} ",
+    "interval": 1
+  },
+  "custom/powerline-4-tail": { "format": "" },
+
+  "custom/powerline-5-head": { "format": "" },
+  "clock#date": {
+    "format": " {:%a %d %b %Y} ",
+    "interval": "once"
+  },
+  "custom/powerline-5-tail": { "format": "" },
+
+  "custom/powerline-6-head": { "format": "" },
+  "wireplumber": {
+    "format": " {node_name} {volume}% ",
+  },
+  "custom/powerline-6-tail": { "format": "" },
 }

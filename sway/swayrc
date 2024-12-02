@@ -1,7 +1,10 @@
 #!/bin/sh
 
-pipewire-pulse &
-pipewire &
-wireplumber &
+# pkill wire
 
+# pipewire &
+# pipewire-pulse &
+# wireplumber &
+
+pkill sway_autotiling
 ~/.cargo/bin/sway_autotiling &
