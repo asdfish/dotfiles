@@ -9,16 +9,6 @@ vim.api.nvim_set_keymap("n", "<s-k>", "gk", { desc = "Move up by visible line" }
 vim.api.nvim_set_keymap("n", "<c-j>", "10j", { desc = "Move down fast" })
 vim.api.nvim_set_keymap("n", "<c-k>", "10k", { desc = "Move up fast" })
 
--- plugins
-vim.api.nvim_set_keymap("n", "<leader>tg", "<cmd>Telescope live_grep<cr>", { desc = "Telescope live grep" })
-vim.api.nvim_set_keymap("n", "<leader>th", "<cmd>Telescope keymaps<cr>", { desc = "Telescope keymaps" })
-
-vim.api.nvim_set_keymap("n", "<c-n>", "<cmd>NvimTreeToggle<cr>", { desc = "Nvim-Tree toggle" })
-
-vim.api.nvim_set_keymap("n", "<leader>lu", "<cmd>Lazy update<cr>", { desc = "Update lazy packages" })
-
-vim.api.nvim_set_keymap("n", "<leader>at", "<cmd>TransparentToggle<cr>", { desc = "Toggle background transparency" })
-
 -- buffer
 vim.api.nvim_set_keymap("n", "<c-q>", "<cmd>bp<cr>", { desc = "Previous buffer" })
 vim.api.nvim_set_keymap("n", "<c-e>", "<cmd>bn<cr>", { desc = "Next buffer" })

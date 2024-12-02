@@ -24,5 +24,7 @@ return {
     require("transparent").clear_prefix("Mason")
     require("transparent").clear_prefix("NvimTree")
     require("transparent").clear_prefix("telescope")
+
+    vim.api.nvim_set_keymap("n", "<leader>at", "<cmd>TransparentToggle<cr>", { desc = "Toggle background transparency" })
   end,
 }
