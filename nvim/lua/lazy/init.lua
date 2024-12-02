@@ -29,4 +29,9 @@ require("lazy").setup({
   install = { colorscheme = { "tokyonight" } },
   -- automatically check for plugin updates
   checker = { enabled = true },
+  rocks = {
+    enabled = false
+  },
 })
+
+vim.api.nvim_set_keymap("n", "<leader>lu", "<cmd>Lazy update<cr>", { desc = "Toggle background transparency" })
