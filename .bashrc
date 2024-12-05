@@ -35,8 +35,8 @@ export TERM="footclient"
 export BROWSER="firefox"
 export MANPAGER='nvim +Man!'
 
-alias cb='cargo build'
-alias cr='cargo run'
+alias cargo='~/.cargo/bin/cargo'
+alias c='cargo'
 
 alias cat='bat'
 alias ls='ec'
