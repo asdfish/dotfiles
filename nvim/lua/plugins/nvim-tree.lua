@@ -5,7 +5,7 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
   config = function()
-    require("nvim-tree").setup({
+    require("nvim-tree").setup {
       on_attach = "default",
       hijack_cursor = false,
       auto_reload_on_write = true,
@@ -276,8 +276,6 @@ return {
           watcher = false,
         },
       },
-    })
-
-    vim.api.nvim_set_keymap("n", "<c-n>", "<cmd>NvimTreeToggle<cr>", { desc = "Nvim-Tree toggle" })
+    }
   end,
 }
