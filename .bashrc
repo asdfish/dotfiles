@@ -35,9 +35,13 @@ export TERM="footclient"
 export BROWSER="firefox"
 export MANPAGER='nvim +Man!'
 
+# programming
 alias cargo='~/.cargo/bin/cargo'
 alias c='cargo'
+alias m='make'
+alias g='git'
 
+# util
 alias cat='bat'
 alias ls='ec'
 alias grep='grep --color=auto'
@@ -46,8 +50,6 @@ alias ip='ip -color=auto'
 alias cjunk='wl-copy asdf'
 alias v='nvim'
 alias vc='nvim --clean'
-
-alias m='make'
 
 ghc() {
   if [ -z "${1}" ]; then
