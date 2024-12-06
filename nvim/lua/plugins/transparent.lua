@@ -9,10 +9,12 @@ return {
         'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String', 'Function',
         'Conditional', 'Repeat', 'Operator', 'Structure', 'LineNr', 'NonText',
         'SignColumn', 'StatusLine', 'StatusLineNC', -- "CursorLine", "CursorLineNr",
-        'EndOfBuffer'
+        'EndOfBuffer',
       }, -- CursorLine, CursorLineNr
       -- table: additional groups that should be cleared
       extra_groups = {
+        "Lazy",
+        "NvimTreeNormal",
       },
       -- table: groups you don't want to clear
       exclude_groups = {},
@@ -20,10 +22,6 @@ return {
       -- Also the user event "TransparentClear" will be triggered
       on_clear = function() end,
     })
-    require("transparent").clear_prefix("Lazy")
-    require("transparent").clear_prefix("Mason")
-    require("transparent").clear_prefix("NvimTree")
-    require("transparent").clear_prefix("telescope")
 
     vim.api.nvim_set_keymap("n", "<leader>at", "<cmd>TransparentToggle<cr>", { desc = "Toggle background transparency" })
   end,

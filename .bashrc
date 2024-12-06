@@ -27,9 +27,9 @@ alias ip='ip -color=auto'
 alias v='nvim'
 alias vc='nvim --clean'
 
-# cargo
-alias cb='cargo build'
-alias cr='cargo run'
+## programming
+alias m='make'
+alias c='cargo'
 
 # exports
 export BROWSER='firefox'
