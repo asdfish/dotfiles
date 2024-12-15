@@ -30,6 +30,11 @@ export PATH="$PATH:~/.cargo/bin/"
 export CC="gcc"
 export CXX="g++"
 
+export COMMONFLAGS='-O2 -march=native -pipe'
+export CFLAGS="${COMMONFLAGS}"
+export CXXFLAGS="${COMMONFLAGS}"
+export LDFLAGS='-fuse-ld=mold'
+
 export EDITOR="nvim"
 export TERM="footclient"
 export BROWSER="firefox"
@@ -56,6 +61,14 @@ ghc() {
     return
   fi
   git clone "https://github.com/${1}" --depth 1 --recursive
+}
+# firefox profile
+fp() {
+  if [ -z "${1}" ]; then
+    return
+  fi
+
+  firefox -P "${1}" & exit
 }
 
 shopt -s autocd

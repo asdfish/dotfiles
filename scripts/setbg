@@ -1,5 +1,11 @@
 #!/bin/sh
 
+if [ -z "${1}" ]; then
+  WALLPAPER="$(find ~/files/s -type f | shuf -n 1)"
+else
+  WALLPAPER="${1}"
+fi
+
 pkill swaybg
-swaybg -i $(find ~/files/s -type f | shuf -n 1) -m fill &
+swaybg -i "${WALLPAPER}" -m fill &
 exit
